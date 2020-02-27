@@ -1,0 +1,14 @@
+api desarrollada por netflix, implementa el patrón de diseño circuit breaker
+
+permite el manejo de fallo de errores en la comunicación vía http con otro servicio externo a la aplicación, con ello
+simula una respuesta (harcodeada) configurada por nostros, esta declaración debe ser la misma que la del método invocado
+
+cuando suceda un fallo se abre el circuito (open) y se deriva al método configurado, a partir de un número de peticiones fallidas
+las siguientes ya no irán al servicio sino directamente al método configurado. Luego de cierto tiempo se volvera a realizar la
+peticion contra el servicio (half open) para validar si se encuentra habilitado
+
+para configurar el tiempo de timeout se puede realizar directamente desde el método anotado o con un atributo en el archivo de configuración
+.properties hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 20000
+
+fuentes: http://www.robertocrespo.net/kaizen/microservicios-implementar-circuit-breaker-hystrix/
+         https://www.adictosaltrabajo.com/2017/10/09/spring-cloud-hystrix-resilient-services/

@@ -1,0 +1,2 @@
+fuentes: https://restfulapi.net/resource-naming/
+        https://nordicapis.com/10-best-practices-for-naming-api-endpoints/

@@ -1,0 +1,23 @@
+sentencias nginx
+
+service nginx start
+service nginx stop
+service nginx restart
+service nginx reload
+
+directivas nginx
+
+events -> configuración de peticiones, manejo de conexiones
+	worker_connections 66536 -> total de conecciones que soporta
+http -> define directivas y bloques en función de nginx
+	server -> declarar sitios web
+	location -> redirección en url, secciones del sitio web
+		root -> establece ruta de acceso a recursos web
+		alias -> sobrescribe una ruta fija de acceso a recursos
+		/path en location añade al root definido dentro de su bloque esta última ruta (ruta definida en el root/path)
+	
+	upstream -> define la configuración de servidores (llamadas proxy)
+
+include -> incluye archivos externos
+
+*.conf -> módulo de configuración externo
