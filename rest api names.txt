@@ -1,2 +1,41 @@
+el nombre del contexto debe ser en singular (user-management)
+	http://api.example.com/user-management/users/{id}
+	
+el nombre de la colección o el recurso debe ser un sustantivo en plural y no un verbo (users)
+	http://api.example.com/user-management/users/{id}
+	
+el nombre del storage o siguiente nivel del recurso debe ser sustantivo y plural (cars)
+	http://api.example.com/cart-management/users/{id}/carts
+	
+el nombre del controller o método debe ser un verbo (play)
+	http://api.example.com/song-management/users/{id}/playlist/play
+
+consideraciones:
+usar e slash para indicar jerarquías
+	http://api.example.com/device-management/managed-devices/{id}/scripts
+
+al fin de la url no debe ir el slash (/)
+	http://api.example.com/user-management/users
+
+usar guión para unir palabras en vez de camel case
+	http://api.example.com/inventory-management/managed-entities/{id}
+	
+no usar _ para unir palabras
+usar todo en minúscula (no camel case)
+no usar extensiones de archivos (.xml, etc)
+usar método descriptivos, fáciles de identificar (en la medida que se pueda evitar abreviaciones)
+usar métodos HTTP (GET (obtener), POST (registrar), UPDATE (actualizar), DELETE (eliminar))
+manejar el error y mostrar una respuesta legible sin mostrar datos demasiados técnicos
+usar códigos HTTP (200 (éxito), 404 (no encontrado), 505 (error del servidor), etc)
+referente a los código HTTP abarcan (2xx (para éxito), 4xx (error del cliente), 5xx (error del servidor))
+
+no usar el nombre de las acciones del crud (create, read, update, delete)
+	.../user-management/users (GET) -> para listar en vez de .../user-management/users/list
+	.../user-management/users/{code} (GET) -> para obtener en vez de .../user-management/users/get/{code}
+	.../user-management/users (POST) -> para registrar en vez de .../user-management/users/register
+	.../user-management/users (UPDATE) -> para actualizar en vez de .../user-management/users/update
+	.../user-management/users/{code} (DELETE) -> para eliminar en vez de .../user-management/users/delete
+
+
 fuentes: https://restfulapi.net/resource-naming/
         https://nordicapis.com/10-best-practices-for-naming-api-endpoints/
