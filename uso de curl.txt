@@ -1,0 +1,51 @@
+abreviación de <client url/curl url request library>, es una biblioteca de funciones, o una serie de comandos 
+que permite establer comunicación con otros servidores o transferir archivos
+
+verificar instalación
+curl --versión
+
+sintaxis
+curl [opcion] [url]
+
+guardar un archivo
+curl -O <url>
+
+	guardar el archivo con otro nombre
+	curl -o <nombre_nuevo_del_archivo> <url>
+
+	ante una interrupción, poder retomarla
+	curl -C - -O <url>
+
+para métodos http
+get
+curl <url>
+curl -H "Content-Type: application/json" ...
+
+post
+curl --data "{\"clave\": \"valor\"}" <url>
+curl -d ...
+curl -H "Content-Type: application/json" --data ...
+
+put
+curl -X PUT --data "{\"clave\": \"valor\"}" <url>
+curl -X PUT -d ...
+curl -X PUT -H "Content-Type: application/json" --data ...
+
+delete
+curl -X DELETE <url>
+curl -X DELETE -H "Content-Type: application/json" ...
+
+enviar header
+curl -H "Content-Type: application/json" --data "{\"clave\": \"valor\"}" <url>
+curl -H "Content-Type: application/json" -H "clave: valor" --data "{\"clave\": \"valor\"}" <url>
+
+para obtener información más detallada
+verboso
+curl -v <url>
+
+header
+curl -i <url>
+
+fuente
+https://www.hostinger.es/tutoriales/comando-curl/
+https://parzibyte.me/blog/2019/05/14/aprende-a-usar-curl/
