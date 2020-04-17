@@ -20,20 +20,30 @@ para métodos http
 get
 curl <url>
 curl -H "Content-Type: application/json" ...
+aplicación:
+curl http://localhost:8099/clients
+curl http://localhost:8099/clients/CLI01
 
 post
 curl --data "{\"clave\": \"valor\"}" <url>
+curl -X POST --data "{\"clave\": \"valor\"}" <url>
 curl -d ...
 curl -H "Content-Type: application/json" --data ...
+aplicación:
+curl --data "{\"code\": \"CLI03\", \"name\": \"demo\"}" -H "Content-Type: application/json" http://localhost:8099/clients
 
 put
 curl -X PUT --data "{\"clave\": \"valor\"}" <url>
 curl -X PUT -d ...
 curl -X PUT -H "Content-Type: application/json" --data ...
+aplicación:
+curl -X PUT --data "{\"code\": \"CLI03\", \"name\": \"test\"}" -H "Content-Type: application/json" http://localhost:8099/clients
 
 delete
 curl -X DELETE <url>
 curl -X DELETE -H "Content-Type: application/json" ...
+aplicación:
+curl -X DELETE http://localhost:8099/clients/CLI03
 
 enviar header
 curl -H "Content-Type: application/json" --data "{\"clave\": \"valor\"}" <url>
