@@ -20,7 +20,7 @@ al fin de la url no debe ir el slash (/)
 usar guión para unir palabras en vez de camel case
 	http://api.example.com/inventory-management/managed-entities/{id}
 	
-no usar _ para unir palabras
+no usar "_" para unir palabras
 usar todo en minúscula (no camel case)
 no usar extensiones de archivos (.xml, etc)
 usar método descriptivos, fáciles de identificar (en la medida que se pueda evitar abreviaciones)
@@ -37,5 +37,6 @@ no usar el nombre de las acciones del crud (create, read, update, delete)
 	.../user-management/users/{code} (DELETE) -> para eliminar en vez de .../user-management/users/delete
 
 
-fuentes: https://restfulapi.net/resource-naming/
-        https://nordicapis.com/10-best-practices-for-naming-api-endpoints/
+fuentes:
+https://restfulapi.net/resource-naming/
+https://nordicapis.com/10-best-practices-for-naming-api-endpoints/

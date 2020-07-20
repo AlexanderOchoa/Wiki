@@ -1,0 +1,23 @@
+partes de un rest api
+
+curl GET http://misitio.com/v1/clientes/CLI1/boletas
+
+http -> protocolo
+misitio.com -> dominio, endpoint root, entrypoint
+v1 -> versión del servicio
+clientes -> recurso, endpoint
+CLI1 -> parámetro
+boletas -> path
+GET -> método
+http://misitio.com/clientes/CLI1 -> endpoint
+
+métodos http gatillados por el mismo HTTP
+
+VALIDATE -> validar si el servicio está activo
+OPTIONS -> validar acceso al sevicio (CORS)
+
+fuentes:
+https://stackoverflow.com/questions/53199289/rest-api-entry-point-and-endpoint
+https://es.stackoverflow.com/questions/51758/qu%C3%A9-es-un-entry-point-y-un-end-point/51764
+https://leanpub.com/esversioning
+https://semver.org/
