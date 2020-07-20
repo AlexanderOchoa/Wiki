@@ -1,4 +1,4 @@
-abreviación de <client url/curl url request library>, es una biblioteca de funciones, o una serie de comandos 
+﻿abreviación de <client url/curl url request library>, es una biblioteca de funciones, o una serie de comandos 
 que permite establer comunicación con otros servidores o transferir archivos
 
 verificar instalación
@@ -56,6 +56,6 @@ curl -v <url>
 header
 curl -i <url>
 
-fuente
+fuentes:
 https://www.hostinger.es/tutoriales/comando-curl/
 https://parzibyte.me/blog/2019/05/14/aprende-a-usar-curl/
